@@ -11,3 +11,6 @@
 2. Asset 준비
 
 - [ ] HTML Document 셋업 & Webfont 적용
+- [ ] 이미지 파일 업로드
+- [ ] icon svg를 icon-font로 바꾸기
+      svg를 태그 자체로 사용하면 할 수 있는게 많아진다.
