@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  // 상속받다. 앵커의 부모요소의 색깔을 상속받겠다
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  //transparent 투명한
+  border: 0;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  // 밑에 다시 선언해주지 않아도 엔퍼센트를 이용하여 간단하게 표시가능
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
