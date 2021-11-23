@@ -360,7 +360,7 @@ ol {
   padding: 0;
   list-style: none; }
 
-.visual-hidden {
+.visually-hidden {
   position: absolute !important;
   width: 1px !important;
   height: 1px !important;
@@ -391,7 +391,7 @@ ol {
   .sm-hidden {
     display: none !important; } }
 
-@media screen and (min-width: 768px) and (max-width: 767px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .md-hidden {
     display: none !important; } }
 
@@ -762,6 +762,22 @@ i {
 .ic-store:before {
   content: '\e90f'; }
 
+.gnb-nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; }
+
+.gnb-nav-item {
+  margin-right: 24px; }
+  .gnb-nav-item:last-child {
+    margin-right: 0; }
+  .gnb-nav-item a {
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.02em;
+    color: #3f4150;
+    font-weight: 700; }
+
 /*
   * MOBILE(<768px) 
   * fixture ------------- sm
@@ -834,7 +850,7 @@ i {
         width: 91.66667%; }
       .container .col-md-12 {
         width: 100%; } }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
     .container {
       max-width: 1140px;
       padding: 0; }
@@ -898,5 +914,34 @@ i {
       display: block;
       width: auto;
       height: 20px; }
+  @media screen and (min-width: 768px) {
+    .gnb-left {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; }
+    .gnb-right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end; }
+      .gnb-right .button-group {
+        margin-right: 24px; }
+        .gnb-right .button-group .gnb-icon-button {
+          margin-right: 8px; }
+    .gnb-wrapper {
+      height: 80px; }
+    .gnb .logo {
+      position: static;
+      margin-right: 32px;
+      transform: none; }
+      .gnb .logo img {
+        height: 24px; }
+    .gnb .btn-primary {
+      width: 88px; }
+      .gnb .btn-primary i {
+        margin-left: 4px; } }
+  @media screen and (min-width: 1200px) {
+    .gnb-right .input-group {
+      width: 264px;
+      margin-right: 24px; } }
 
 /*# sourceMappingURL=style.css.map */
