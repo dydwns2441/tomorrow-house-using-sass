@@ -1,9 +1,27 @@
 .gnb-nav {
+  $padding: 8px;
+
   &-list {
     @include flexbox(start);
+    //메뉴의 padding을 업데이트 해주면서 로고와 메뉴간의 간격이 멀어졌다.
+    // 기존 간격을 유지하기 위한 설정
+    /* 방법 1. 간단하게 마이너스 margin으로 좌측으로 땡기기 */
+    // margin-left: -#{$padding};
+
+    /* 방법 2. position: relative를 사용해서 좌측으로 땡기기 */
+    position: relative;
+    left: -#{$padding}; /* 혹은 right: $padding; */
   }
+
   &-item {
-    margin-right: 24px;
+    margin-right: 24px - ($padding * 2);
+
+    &.is-active,
+    &:hover {
+      a {
+        color: $blue;
+      }
+    }
 
     &:last-child {
       margin-right: 0;
@@ -11,6 +29,8 @@
 
     a {
       @include text-style(18, $primary);
+      display: block;
+      padding: $padding;
       font-weight: 700;
     }
   }
