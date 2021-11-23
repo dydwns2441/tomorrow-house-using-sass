@@ -11,22 +11,11 @@
     .button-group {
       @include flexbox(end);
     }
-    .gnb-search-button {
+    .gnb-icon-button.is-button {
       margin-right: 4px;
     }
   }
   // 이런 식으로 gnb gnb 안써두된다. 클래스 이름 만들어줌
-  &-icon-button {
-    @include flexbox;
-    width: 32px;
-    height: 32px;
-    font-size: 24px;
-    color: $secondary;
-  }
-
-  &-menu-button {
-    color: $blue;
-  }
 
   .logo {
     @include pos-center;
