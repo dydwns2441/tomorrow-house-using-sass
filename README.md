@@ -1,3 +1,5 @@
+# 내일의 집
+
 21년 10월 27일
 
 1. 개발 환경 설정
@@ -34,8 +36,105 @@
   - scope도 가능
 - [x] 색상 팔레트
 - [x] 타이포그래피
-- [ ] 그리드 시스템
-- [ ] 그리드 시스템 분석 훈련
-- [ ] 반응형 그리드 시스템 설계1
-- [ ] 반응형 그리드 시스템 설계2
-- [ ] 반응형 그리드 시스템 설계3
+- [x] 그리드 시스템
+- [x] 그리드 시스템 분석 훈련
+- [x] 반응형 그리드 시스템 설계1
+- [x] 반응형 그리드 시스템 설계2
+- [x] 반응형 그리드 시스템 설계3
+- constants 폴더확인하기
+
+4. 믹스인 Mixin
+
+- [x] text styled
+- [x] responsive
+- [x] positions
+- [x] flexbox
+- mixin 폴더확인하기
+
+5. 모듈 module
+
+- [x] tags
+- [x] avatars
+- [x] star ratings(별점)
+- [x] prices(가격표)
+- [x] button
+- [x] form
+- [x] pagenation
+- [x] untility 클래스 업데이트
+- module 폴더확인하기
+
+6. gnb
+
+- 로그인을 하지 않은 경우
+
+```html
+<div class="button-group">
+  <button
+    class="gnb-icon-button is-search lg-hidden"
+    type="button"
+    aria-label="검색 열기 버튼"
+  >
+    <i class="ic-search"></i>
+  </button>
+  <a
+    class="gnb-icon-button is-cart"
+    href="/"
+    aria-label="장바구니 페이지로 이동"
+  >
+    <i class="ic-cart"></i>
+  </a>
+  <div class="gnb-auth sm-hidden">
+    <a href="/">로그인</a>
+    <a href="/">회원가입</a>
+  </div>
+</div>
+```
+
+- 로그인을 했을 경우
+
+```html
+<div class="button-group">
+  <button
+    class="gnb-icon-button is-search lg-hidden"
+    type="button"
+    aria-label="검색 열기 버튼"
+  >
+    <i class="ic-search"></i>
+  </button>
+
+  <a
+    class="gnb-icon-button sm-hidden"
+    href="/"
+    aria-label="스크랩북 페이지로 이동"
+  >
+    <i class="ic-bookmark"></i>
+  </a>
+
+  <a
+    class="gnb-icon-button sm-hidden"
+    href="/"
+    aria-label="내소식 페이지로 이동"
+  >
+    <i class="ic-bell"></i>
+  </a>
+
+  <a
+    class="gnb-icon-button is-cart"
+    href="/"
+    aria-label="장바구니 페이지로 이동"
+  >
+    <i class="ic-cart"></i>
+    <strong class="badge">9</strong>
+  </a>
+
+  <button
+    class="gnb-avatar-button sm-hidden"
+    type="button"
+    aria-label="마이메뉴 열기 버튼"
+  >
+    <div class="avatar-32">
+      <img src="./assets/images/img-user-01.jpg" alt="유저 이미지" />
+    </div>
+  </button>
+</div>
+```
