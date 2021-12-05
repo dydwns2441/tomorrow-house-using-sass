@@ -1,0 +1,46 @@
+.lnb {
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &-list {
+    position: relative;
+    left: -8px;
+    //두번째 방법
+    //flex는 block 이다. width: 부모의 100%가 되는데
+    //inline-flex는 inline이다. width는 가지고 있는 컨텐츠의 총합
+    // white-space를 no-wrap으로 주었기에 100%가 넘을 수 있다.
+    @include inline-flexbox(start);
+    white-space: nowrap;
+    // 첫번째 방법
+    // width값으 정해준다. width:500px;
+    // 하지만 크기에 따라 변하지 않는다.
+    // width: max-content. min-content는 자신이 가지고 있는 자손의 사이즈가 특정값으로 고정되지 않았을 때 의미있게 사용 가능하다는 것, 하지만 호환성에 좋지않다.
+    // width: max-content;
+  }
+  // overflow 1. 기준점이 있어야한다.
+  // 기준보다 더 긴 요소가 있어야 한다.
+  &-item {
+    //두번째 방법으로 shrink 지우기
+    // flex-shrink: 0;
+    &.is-active {
+      a {
+        color: $blue;
+        border-bottom: 2px solid $blue;
+      }
+    }
+
+    a {
+      @include text-style(13, $dark);
+      @include inline-flexbox;
+      height: 40px;
+      padding: 0 8px;
+      font-weight: 700;
+    }
+
+    .ic-new {
+      color: red;
+    }
+  }
+}
