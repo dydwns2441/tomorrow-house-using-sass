@@ -1,18 +1,21 @@
 .lnb {
-  overflow-x: auto;
+  $lnb-link-padding: 8px;
+  $grid-margin: $sm-margin + $gutter / 2;
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  overflow-x: auto;
+  @include no-scrollbar;
   &-list {
-    position: relative;
-    left: -8px;
     //두번째 방법
     //flex는 block 이다. width: 부모의 100%가 되는데
     //inline-flex는 inline이다. width는 가지고 있는 컨텐츠의 총합
     // white-space를 no-wrap으로 주었기에 100%가 넘을 수 있다.
     @include inline-flexbox(start);
+    height: 40px;
     white-space: nowrap;
+    margin-left: -#{$grid-margin};
+    padding: 0 #{$grid-margin - $lnb-link-padding};
+    border-bottom: 1px solid $border;
+
     // 첫번째 방법
     // width값으 정해준다. width:500px;
     // 하지만 크기에 따라 변하지 않는다.
@@ -27,7 +30,7 @@
     &.is-active {
       a {
         color: $blue;
-        border-bottom: 2px solid $blue;
+        border-bottom-color: $blue;
       }
     }
 
@@ -35,12 +38,9 @@
       @include text-style(13, $dark);
       @include inline-flexbox;
       height: 40px;
-      padding: 0 8px;
+      padding: 0 $lnb-link-padding;
       font-weight: 700;
-    }
-
-    .ic-new {
-      color: red;
+      border-bottom: 2px solid transparent;
     }
   }
 }
