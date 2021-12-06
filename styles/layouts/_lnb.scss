@@ -6,6 +6,8 @@
 
   overflow-x: auto;
   @include no-scrollbar;
+  background-color: $white;
+
   &-list {
     //두번째 방법
     //flex는 block 이다. width: 부모의 100%가 되는데
